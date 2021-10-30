@@ -1,0 +1,25 @@
+.notification {
+  h2 {
+    font-weight: 500;
+  }
+
+  .container {
+    width: 100%;
+    overflow: auto;
+  }
+
+  table {
+    width: 100%;
+  }
+
+  .delete {
+    cursor: pointer;
+  }
+
+  .add-notification {
+    position: fixed;
+    right: 20px;
+    bottom: 97px;
+    z-index: 999;
+  }
+}

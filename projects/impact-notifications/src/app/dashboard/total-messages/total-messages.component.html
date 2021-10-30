@@ -1,0 +1,16 @@
+<div class="total-messages">
+  <mat-card class="">
+    <mat-card-content>
+      <div fxLayout="row" fxLayoutAlign="start center" fxLayoutGap="20px">
+        <div class="circle" fxLayout="row" fxLayoutAlign="center center">
+          <i class="material-icons">chat</i>
+        </div>
+
+        <div>
+          <h2>{{ messages && messages.length ? messages.length : 0 }}.00</h2>
+          <h3>Total Messages</h3>
+        </div>
+      </div>
+    </mat-card-content>
+  </mat-card>
+</div>

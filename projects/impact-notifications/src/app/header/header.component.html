@@ -1,0 +1,49 @@
+<div class="header">
+  <mat-toolbar class="mat-elevation-z8 toolbar">
+    <button mat-icon-button aria-label="">
+      <img src="../../assets/logo.png" width="100%" />
+    </button>
+
+    <span style="margin-left: 10px"> Impact Tech</span>
+    <span class="spacer"></span>
+    <button mat-icon-button aria-label=""></button>
+    <button
+      mat-icon-button
+      aria-label=""
+      (click)="logOut()"
+      *ngIf="currentUser?.authenticated"
+    >
+      <span class="material-icons">logout</span>
+    </button>
+  </mat-toolbar>
+
+  <!-- Mobile -->
+  <div *ngIf="screenWidth <= 480">
+    <mat-toolbar class="toolbarNav">
+      <button
+        mat-flat-button
+        routerLink="/dashboard"
+        routerLinkActive="active-link"
+      >
+        <mat-icon class="material-icons">dashboard</mat-icon>
+        <span>Dashboard</span>
+      </button>
+      <button
+        mat-flat-button
+        routerLink="/profile"
+        routerLinkActive="active-link"
+      >
+        <mat-icon class="material-icons">person</mat-icon>
+        <span>Profile</span>
+      </button>
+      <button
+        mat-flat-button
+        routerLink="/notification"
+        routerLinkActive="active-link"
+      >
+        <mat-icon class="material-icons">notifications</mat-icon>
+        <span>Notification</span>
+      </button>
+    </mat-toolbar>
+  </div>
+</div>

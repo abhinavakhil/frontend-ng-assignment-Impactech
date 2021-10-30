@@ -1,0 +1,44 @@
+.header {
+  .spacer {
+    flex: 1 1 auto;
+  }
+
+  .toolbar {
+    background: #ffffff;
+    border-bottom: 3px solid #f0f1f2;
+
+    @media only screen and (max-width: 480px) {
+      height: 70px;
+    }
+  }
+
+  // Mobile
+  .toolbarNav {
+    position: fixed;
+    bottom: 0;
+    z-index: 1000;
+    display: flex;
+    justify-content: space-between;
+    padding: 2em;
+    background-color: white;
+    -webkit-box-shadow: 3px 3px 5px 6px #ccc; /* Safari */
+    -moz-box-shadow: 3px 3px 5px 6px #ccc; /* Firefox */
+    box-shadow: 2px 2px 4px 5px #ccc; /* Opera */
+
+    button {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      width: 100%;
+      span {
+        display: block;
+      }
+    }
+  }
+
+  button:hover,
+  .active-link {
+    background: #ff4081;
+    color: #ffffff;
+  }
+}

@@ -1,0 +1,55 @@
+<form class="dialog-container">
+  <div class="web-close-icon">
+    <button
+      matTooltip="Close"
+      matTooltipPosition="above"
+      data-dismiss="modal"
+      (click)="closeDialog()"
+      class="web-close-btn"
+    >
+      <span class="material-icons" style="position: relative">clear</span>
+    </button>
+  </div>
+
+  <h2>Add Message</h2>
+  <mat-form-field class="autocomplete" appearance="outline">
+    <mat-label>Select a user to send message</mat-label>
+    <input
+      type="text"
+      placeholder="Pick one"
+      aria-label="Number"
+      matInput
+      [formControl]="myControl"
+      [matAutocomplete]="auto"
+    />
+    <mat-autocomplete autoActiveFirstOption #auto="matAutocomplete">
+      <mat-option
+        *ngFor="let user of users"
+        [value]="user.email"
+        (onSelectionChange)="selectedUser($event, user)"
+      >
+        {{ user.email }}
+      </mat-option>
+    </mat-autocomplete>
+  </mat-form-field>
+
+  <!-- TextArea for message -->
+  <textarea
+    autosize
+    class="text-area"
+    placeholder="enter text to send notification"
+    (input)="getMessage($event.target.value)"
+  >
+  </textarea>
+
+  <div fxLayoutAlign="end" class="action">
+    <button
+      mat-raised-button
+      color="primary"
+      (click)="createMessage()"
+      [disabled]="message?.length <= 0 && !selectedEmail?.email"
+    >
+      Send Message
+    </button>
+  </div>
+</form>

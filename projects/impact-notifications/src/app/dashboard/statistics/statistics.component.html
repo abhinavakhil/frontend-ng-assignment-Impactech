@@ -1,0 +1,21 @@
+<div class="statistics">
+  <mat-card class="mat-elevation-z3">
+    <h3 class="title">Statistics</h3>
+    <mat-divider></mat-divider>
+    <mat-card-content>
+      <div class="chart-wrapper">
+        <canvas
+          baseChart
+          [datasets]="lineChartData"
+          [labels]="lineChartLabels"
+          [options]="lineChartOptions"
+          [colors]="lineChartColors"
+          [legend]="lineChartLegend"
+          [chartType]="lineChartType"
+          [plugins]="lineChartPlugins"
+        >
+        </canvas>
+      </div>
+    </mat-card-content>
+  </mat-card>
+</div>

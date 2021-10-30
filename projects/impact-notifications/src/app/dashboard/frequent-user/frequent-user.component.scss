@@ -1,0 +1,33 @@
+.frequent-user {
+  .circle {
+    border-radius: 15%;
+    width: 60px;
+    height: 60px;
+    background: antiquewhite;
+  }
+
+  h2 {
+    margin-bottom: -10px;
+    text-align: center;
+    max-width: 100%;
+    white-space: nowrap;
+    overflow: hidden !important;
+    text-overflow: ellipsis;
+  }
+
+  .wrapper {
+    width: 80%;
+
+    @media only screen and (max-width: 480px) {
+      width: 70%;
+    }
+  }
+
+  h3 {
+    text-align: center;
+  }
+
+  .material-icons {
+    color: #ffffff;
+  }
+}

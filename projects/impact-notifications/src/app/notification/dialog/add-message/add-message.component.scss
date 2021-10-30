@@ -1,0 +1,55 @@
+.dialog-container {
+  background-color: #ffffff;
+  width: 1000px;
+  height: 100%;
+  margin: auto;
+  max-width: 100% !important;
+
+  @media only screen and (max-height: 480px) {
+    overflow-y: hidden;
+  }
+
+  .autocomplete {
+    width: 100%;
+  }
+
+  h2 {
+    font-weight: 500;
+  }
+
+  .text-area {
+    width: 99%;
+    border: 2px solid #f0f1f2;
+    min-height: 250px;
+    border-radius: 10px;
+  }
+
+  .action {
+    margin-top: 50px;
+  }
+}
+
+.web-close-icon {
+  position: relative;
+
+  button {
+    float: right;
+    font-size: 1.5rem;
+    font-weight: 700;
+    line-height: 1;
+    color: #000;
+    opacity: 0.5;
+    width: 37px;
+    padding: 0px;
+    border: 0px;
+    background-color: transparent;
+    span {
+      font-size: 36px;
+      color: #707070;
+      cursor: pointer;
+    }
+  }
+  button span:hover {
+    background-color: #70707040;
+  }
+}
