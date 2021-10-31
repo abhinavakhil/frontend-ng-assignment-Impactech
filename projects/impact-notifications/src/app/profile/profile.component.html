@@ -1,6 +1,6 @@
 <div class="profile-container">
   <mat-card>
-    <mat-card-title>My Profile</mat-card-title>
+    <mat-card-title>{{ "profile.title" | translate }}</mat-card-title>
 
     <mat-card-content>
       <form [formGroup]="profileForm">
@@ -18,11 +18,10 @@
         mat-raised-button
         color="primary"
         (click)="updateUser()"
-        [disabled]="profileForm.invalid"
+        [disabled]="!profileForm.get('password').touched"
       >
-        Update
+        {{ "profile.update_btn" | translate }}
       </button>
-      <button mat-raised-button>cancel</button>
     </mat-card-actions>
   </mat-card>
 </div>

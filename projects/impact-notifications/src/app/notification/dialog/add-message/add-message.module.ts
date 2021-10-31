@@ -6,6 +6,7 @@ import { MaterialModule } from 'projects/impact-notifications/src/shared/materia
 import { FlexLayoutModule } from '@angular/flex-layout';
 import { FormsModule } from '@angular/forms';
 import { ReactiveFormsModule } from '@angular/forms';
+import { TranslateModule } from '@ngx-translate/core';
 
 @NgModule({
   declarations: [AddMessageComponent],
@@ -16,6 +17,7 @@ import { ReactiveFormsModule } from '@angular/forms';
     FlexLayoutModule,
     FormsModule,
     ReactiveFormsModule,
+    TranslateModule,
   ],
   exports: [AddMessageComponent],
 })

@@ -1,12 +1,13 @@
 <div class="latest-feed">
   <mat-card>
-    <h3 class="title">Latest Feed</h3>
+    <h3 class="title">{{ "dashboard.latest_feed" | translate }}</h3>
     <mat-divider></mat-divider>
     <mat-card-content *ngIf="messages.length">
       <div *ngFor="let message of messages">
         <p>
-          {{ message.message | titlecase }} - from ({{ message.from_email }}) -
-          to ({{ message.to_email }}) -
+          {{ message.message | titlecase }} -
+          {{ "notification.form" | translate }} ({{ message.from_email }}) -
+          {{ "notification.to" | translate }} ({{ message.to_email }}) -
           {{ getCurrentDate(message.created_at) }}
         </p>
         <mat-divider></mat-divider>
@@ -14,13 +15,15 @@
     </mat-card-content>
 
     <mat-card-actions align="end" *ngIf="messages.length">
-      <button mat-button routerLink="/notification">View More</button>
+      <button mat-button routerLink="/notification">
+        {{ "dashboard.more" | translate }}
+      </button>
     </mat-card-actions>
 
     <div *ngIf="messages.length == 0">
       <p>
         <button mat-raised-button routerLink="/notification">
-          Add notification to see latest feed
+          {{ "dashboard.latest_feed_zero_state" | translate }}
         </button>
       </p>
     </div>

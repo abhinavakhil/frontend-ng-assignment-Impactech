@@ -8,6 +8,7 @@ import { FormlyMaterialModule } from '@ngx-formly/material';
 import { MaterialModule } from '../../../../../../impact-notifications/src/shared/material/material.module';
 import { AuthenticationService } from '../../services/authentication.service';
 import { ToastrModule } from 'ngx-toastr';
+import { TranslateModule } from '@ngx-translate/core';
 
 const routes: Routes = [
   {
@@ -26,6 +27,7 @@ const routes: Routes = [
     FormlyMaterialModule,
     MaterialModule,
     ToastrModule,
+    TranslateModule,
   ],
   providers: [AuthenticationService],
   exports: [LoginComponent],

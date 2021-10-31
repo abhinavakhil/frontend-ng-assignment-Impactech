@@ -31,14 +31,11 @@ export default {
  * @returns
  */
 function getNotifications(params) {
-  let username = params.get('username');
   let notifications = localStorage.getItem('users-notifications');
   if (notifications != null) {
     let userNotifications = JSON.parse(notifications);
     let length = userNotifications.length;
 
-    // console.log(userNotifications.findIndex((x) => x.username === username));
-    // let index = userNotifications.findIndex((x) => x.username === username);
     if (length > -1) {
       return of(
         new HttpResponse({
@@ -66,17 +63,7 @@ function sendNotifications(params) {
   let notifications = localStorage.getItem('users-notifications');
   if (notifications != null) {
     let userNotifications = JSON.parse(notifications);
-    // let index = userNotifications.findIndex(
-    //   (x) => x.username === params.recepient
-    // );
-    // if (index > -1) {
-    //   userNotifications[index].notifications.push(params.notification);
-    // } else {
-    //   userNotifications.push({
-    //     username: params.recepient,
-    //     notifications: [params.notification],
-    //   });
-    // }
+
     userNotifications.push({ ...params });
     localStorage.setItem(
       'users-notifications',
@@ -87,8 +74,6 @@ function sendNotifications(params) {
       'users-notifications',
       JSON.stringify([
         {
-          // username: params.recepient,
-          // notifications: [params.notification],
           ...params,
         },
       ])

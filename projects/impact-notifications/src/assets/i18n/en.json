@@ -1,0 +1,47 @@
+{
+  "dashboard": {
+    "title": "Dashboard",
+    "total_users": "Total Users",
+    "frequent_user": "Most Frequent User",
+    "user_not_available": "User not available",
+    "total_message": "Total Messages",
+    "statistics": "Statistics",
+    "latest_feed": "Latest Feed",
+    "latest_feed_zero_state": "Add notification to see latest feed",
+    "more": "View More"
+  },
+  "header": {
+    "title": "Impact Tech",
+    "logout": "logout",
+    "dashboard": "Dashboard",
+    "profile": "Profile",
+    "notification": "Notification",
+    "en_lang": "English",
+    "hi_lang": "Hindi",
+    "ge_lang": "Greek"
+  },
+  "notification": {
+    "title": "Mesages",
+    "email": "Email",
+    "form": "From",
+    "to": "To",
+    "message": "Message",
+    "inbox": "Inbox",
+    "outbox": "Outbox",
+    "date": "Date",
+    "zero_state": "No Notification Available",
+    "add": "Add Message",
+    "input_label": "Select a user to send message",
+    "send_message": "Send Message"
+  },
+  "profile": {
+    "title": "My Profile",
+    "update_btn": "Update"
+  },
+  "auth": {
+    "login": "Login ",
+    "register": "Register",
+    "email": "Enter Email",
+    "password": "Enter Password"
+  }
+}

@@ -5,6 +5,7 @@ import { AuthenticationService } from '@impactech/common/src/public-api';
 import { AddMessageComponent } from './dialog/add-message/add-message.component';
 import { monthList } from '../dashboard/monthList';
 import { ToastrService } from 'ngx-toastr';
+import { ConfirmationDialogComponent } from './dialog/confirmation-dialog/confirmation-dialog.component';
 
 @Component({
   selector: 'app-notification',
@@ -65,12 +66,28 @@ export class NotificationComponent implements OnInit {
    * @param id id
    */
   deleteNotification(id) {
-    this.authService.deleteNotification(id).subscribe((response: any) => {
-      if (response?.status == 'SUCCESS') {
-        this.toastr.success('Notification deleted Successfully!');
-        this.getNotification();
-      } else {
-        this.toastr.success('An error occurred !');
+    const dialog = this.dialog.open(ConfirmationDialogComponent, {
+      width: '400px',
+      disableClose: true,
+      data: {
+        materialIcon: 'delete',
+        title: 'Delete Forever?',
+        proceedTitle: 'Delete',
+        text: 'Deleting this message is permanent and cannot be undone.',
+      },
+      hasBackdrop: false,
+    });
+
+    dialog.afterClosed().subscribe((confirmation) => {
+      if (confirmation) {
+        this.authService.deleteNotification(id).subscribe((response: any) => {
+          if (response?.status == 'SUCCESS') {
+            this.toastr.success('Notification deleted Successfully!');
+            this.getNotification();
+          } else {
+            this.toastr.success('An error occurred !');
+          }
+        });
       }
     });
   }

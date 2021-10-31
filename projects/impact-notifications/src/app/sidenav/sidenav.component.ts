@@ -12,9 +12,9 @@ export class SidenavComponent implements OnInit, OnDestroy {
   private _mobileQueryListener: () => void;
 
   sideNavItems: Array<{ name: string; path: string }> = [
-    { name: 'Dashboard', path: '/dashboard' },
-    { name: 'Profile', path: '/profile' },
-    { name: 'Notification', path: '/notification' },
+    { name: 'header.dashboard', path: '/dashboard' },
+    { name: 'header.profile', path: '/profile' },
+    { name: 'header.notification', path: '/notification' },
   ];
 
   constructor(private cd: ChangeDetectorRef, private media: MediaMatcher) {

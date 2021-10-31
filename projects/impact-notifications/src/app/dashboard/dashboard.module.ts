@@ -9,6 +9,7 @@ import { LatestFeedComponent } from './latest-feed/latest-feed.component';
 import { TotalUsersComponent } from './total-users/total-users.component';
 import { FrequentUserComponent } from './frequent-user/frequent-user.component';
 import { TotalMessagesComponent } from './total-messages/total-messages.component';
+import { TranslateModule } from '@ngx-translate/core';
 
 const routes: Routes = [
   {
@@ -17,13 +18,20 @@ const routes: Routes = [
   },
 ];
 @NgModule({
-  declarations: [DashboardComponent, LatestFeedComponent, TotalUsersComponent, FrequentUserComponent, TotalMessagesComponent],
+  declarations: [
+    DashboardComponent,
+    LatestFeedComponent,
+    TotalUsersComponent,
+    FrequentUserComponent,
+    TotalMessagesComponent,
+  ],
   imports: [
     CommonModule,
     RouterModule.forChild(routes),
     MaterialModule,
     FlexLayoutModule,
     StatisticsModule,
+    TranslateModule,
   ],
   exports: [DashboardComponent],
 })

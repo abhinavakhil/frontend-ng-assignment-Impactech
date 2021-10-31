@@ -6,6 +6,7 @@ import { MaterialModule } from '../../shared/material/material.module';
 import { ReactiveFormsModule } from '@angular/forms';
 import { FormlyModule } from '@ngx-formly/core';
 import { FormlyMaterialModule } from '@ngx-formly/material';
+import { TranslateModule } from '@ngx-translate/core';
 
 const routes: Routes = [
   {
@@ -23,6 +24,7 @@ const routes: Routes = [
     ReactiveFormsModule,
     FormlyModule.forRoot(),
     FormlyMaterialModule,
+    TranslateModule,
   ],
   exports: [ProfileComponent],
 })

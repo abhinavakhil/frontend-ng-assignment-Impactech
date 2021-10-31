@@ -1,0 +1,47 @@
+{
+  "dashboard": {
+    "title": "डैशबोर्ड",
+    "total_users": "कुल उपयोगकर्ता",
+    "frequent_user": "सबसे लगातार उपयोगकर्ता",
+    "user_not_available": "उपयोगकर्ता उपलब्ध नहीं है",
+    "total_message": "कुल संदेश",
+    "statistics": "आंकड़े",
+    "latest_feed": "नवीनतम फ़ीड",
+    "latest_feed_zero_state": "नवीनतम फ़ीड देखने के लिए अधिसूचना जोड़ें",
+    "more": "और देखो"
+  },
+  "header": {
+    "title": "इम्पैक्ट टेक",
+    "logout": "लॉग आउट",
+    "dashboard": "डैशबोर्ड",
+    "profile": "प्रोफ़ाइल",
+    "notification": "अधिसूचना",
+    "en_lang": "अंग्रेज़ी",
+    "hi_lang": "हिंदी",
+    "ge_lang": "यूनानी"
+  },
+  "notification": {
+    "title": "संदेश",
+    "email": "ईमेल",
+    "form": "से",
+    "to": "प्रति",
+    "message": "संदेश",
+    "inbox": "इनबॉक्स",
+    "outbox": "आउटबॉक्स",
+    "date": "दिनांक",
+    "zero_state": "कोई अधिसूचना उपलब्ध नहीं",
+    "add": "संदेश डालो",
+    "input_label": "संदेश भेजने के लिए एक उपयोगकर्ता का चयन करें",
+    "send_message": "मेसेज भेजें"
+  },
+  "profile": {
+    "title": "मेरी प्रोफाइल",
+    "update_btn": "अद्यतन"
+  },
+  "auth": {
+    "login": "लॉग इन करें",
+    "register": "रजिस्टर करें",
+    "email": "ईमेल दर्ज करें",
+    "password": "पास वर्ड दर्ज करें"
+  }
+}

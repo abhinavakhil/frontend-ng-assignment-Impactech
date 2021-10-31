@@ -4,9 +4,13 @@
       <img src="../../assets/logo.png" width="100%" />
     </button>
 
-    <span style="margin-left: 10px"> Impact Tech</span>
+    <span style="margin-left: 10px">{{ "header.title" | translate }}</span>
     <span class="spacer"></span>
-    <button mat-icon-button aria-label=""></button>
+
+    <button mat-icon-button [matMenuTriggerFor]="languageMenu">
+      {{ currentLanguage }}
+    </button>
+
     <button
       mat-icon-button
       aria-label=""
@@ -17,6 +21,18 @@
     </button>
   </mat-toolbar>
 
+  <mat-menu #languageMenu="matMenu">
+    <button mat-menu-item (click)="setLanguage('en')">
+      {{ "header.en_lang" | translate }}
+    </button>
+    <button mat-menu-item (click)="setLanguage('hi')">
+      {{ "header.hi_lang" | translate }}
+    </button>
+    <button mat-menu-item (click)="setLanguage('ge')">
+      {{ "header.ge_lang" | translate }}
+    </button>
+  </mat-menu>
+
   <!-- Mobile -->
   <div *ngIf="screenWidth <= 480">
     <mat-toolbar class="toolbarNav">
@@ -26,7 +42,7 @@
         routerLinkActive="active-link"
       >
         <mat-icon class="material-icons">dashboard</mat-icon>
-        <span>Dashboard</span>
+        <span>{{ "header.dashboard" | translate }}</span>
       </button>
       <button
         mat-flat-button
@@ -34,7 +50,7 @@
         routerLinkActive="active-link"
       >
         <mat-icon class="material-icons">person</mat-icon>
-        <span>Profile</span>
+        <span>{{ "header.profile" | translate }}</span>
       </button>
       <button
         mat-flat-button
@@ -42,7 +58,7 @@
         routerLinkActive="active-link"
       >
         <mat-icon class="material-icons">notifications</mat-icon>
-        <span>Notification</span>
+        <span>{{ "header.notification" | translate }}</span>
       </button>
     </mat-toolbar>
   </div>

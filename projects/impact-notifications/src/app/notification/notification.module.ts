@@ -6,6 +6,8 @@ import { MaterialModule } from '../../shared/material/material.module';
 import { AddMessageModule } from './dialog/add-message/add-message.module';
 import { MatTableModule } from '@angular/material/table';
 import { FlexLayoutModule } from '@angular/flex-layout';
+import { TranslateModule } from '@ngx-translate/core';
+import { ConfirmationDialogComponent } from './dialog/confirmation-dialog/confirmation-dialog.component';
 
 const routes: Routes = [
   {
@@ -15,7 +17,7 @@ const routes: Routes = [
 ];
 
 @NgModule({
-  declarations: [NotificationComponent],
+  declarations: [NotificationComponent, ConfirmationDialogComponent],
   imports: [
     CommonModule,
     RouterModule.forChild(routes),
@@ -23,6 +25,7 @@ const routes: Routes = [
     MatTableModule,
     AddMessageModule,
     FlexLayoutModule,
+    TranslateModule,
   ],
   exports: [NotificationComponent],
 })

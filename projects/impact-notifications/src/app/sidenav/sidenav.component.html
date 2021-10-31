@@ -1,5 +1,4 @@
 <div class="sidenav">
-  <!-- <p (click)="sidenav.toggle()">open</p> -->
   <mat-sidenav-container class="sidenav-container">
     <mat-sidenav
       id="sidenavContainer"
@@ -14,7 +13,7 @@
           *ngFor="let item of sideNavItems"
           routerLinkActive="active"
         >
-          {{ item.name }}
+          {{ item.name | translate }}
         </a>
       </mat-nav-list>
     </mat-sidenav>

@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { TranslateService } from '@ngx-translate/core';
 
 @Component({
   selector: 'app-root',
@@ -6,7 +7,20 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.scss'],
 })
 export class AppComponent {
-  title = 'impact-notifications';
+  constructor(private translate: TranslateService) {
+    this.setLanguage();
+  }
 
-  constructor() {}
+  /**
+   * set Language
+   */
+  setLanguage() {
+    const language = localStorage.getItem('currentLanguage');
+    if (language) {
+      this.translate.setDefaultLang(language);
+    } else {
+      localStorage.setItem('currentLanguage', 'en');
+      this.translate.setDefaultLang('en');
+    }
+  }
 }
