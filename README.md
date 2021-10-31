@@ -34,7 +34,33 @@ POST:
 Expects: Object {recepient:string, notification:any}  
 Returns: Object {status: string, message: string}  
 
-The mock API uses the browser local host to store the provided data. The above APIs should suffice for the implementation of the basic functionality of this excersise. You can extend the API as needed to implement different more advanced functionality.  
+The mock API uses the browser local host to store the provided data. The above APIs should suffice for the implementation of the basic functionality of this excersise. You can extend the API as needed to implement different more advanced functionality. 
+
+## Features
+
+## Dashboard
+
+![image](https://user-images.githubusercontent.com/31372157/139586512-cfd09460-580a-42ff-bab4-d0a2807fb096.png)
+![image](https://user-images.githubusercontent.com/31372157/139586523-e1da5eb5-2392-4ba2-a2e7-2965d1fa3369.png)
+
+## Profile
+
+![image](https://user-images.githubusercontent.com/31372157/139586531-b61bec47-30de-4500-aa71-acd776c1d818.png)
+
+## Notification
+
+![image](https://user-images.githubusercontent.com/31372157/139586552-cca56470-83bc-424a-a387-3d81656a888c.png)
+![image](https://user-images.githubusercontent.com/31372157/139586561-2972436f-c0e8-49d7-9a6c-1df7bd5919ab.png)
+![image](https://user-images.githubusercontent.com/31372157/139586573-ddb4bad6-d9fc-43c3-a32c-3315b5ab3b24.png)
+
+## 3 Language Support [ English, Hindi, Greek ]
+![image](https://user-images.githubusercontent.com/31372157/139586609-b1114230-5727-423d-980f-6c250b8bb04b.png)
+![image](https://user-images.githubusercontent.com/31372157/139586614-c729ca07-6afd-42ee-aa15-2ec4edf9ad25.png)
+![image](https://user-images.githubusercontent.com/31372157/139586623-a976cbd1-70a2-4536-a5da-d684feb2f06f.png)
+
+## Mobile Responsive
+![image](https://user-images.githubusercontent.com/31372157/139586851-5ac88f39-a0ea-4662-aea0-81bf96fa10ab.png)
+
 
 ## Build
 
