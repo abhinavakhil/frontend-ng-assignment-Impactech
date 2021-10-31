@@ -8,7 +8,8 @@
     "statistics": "Στατιστική",
     "latest_feed": "Τελευταία ροή",
     "latest_feed_zero_state": "Προσθέστε ειδοποίηση για να δείτε την πιο πρόσφατη ροή",
-    "more": "Δείτε περισσότερα"
+    "more": "Δείτε περισσότερα",
+    "message_distribution": "Διανομή μηνυμάτων / χρήστη"
   },
   "header": {
     "title": "Impact Tech",

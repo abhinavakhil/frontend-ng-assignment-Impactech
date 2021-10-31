@@ -1,0 +1,20 @@
+<div class="message-stats">
+  <mat-card>
+    <h3>{{ "dashboard.message_distribution" | translate }}</h3>
+    <mat-divider></mat-divider>
+    <mat-card-content>
+      <div class="chart-wrapper">
+        <canvas
+          baseChart
+          [data]="pieChartData"
+          [labels]="pieChartLabels"
+          [chartType]="pieChartType"
+          [options]="pieChartOptions"
+          [plugins]="pieChartPlugins"
+          [legend]="pieChartLegend"
+        >
+        </canvas>
+      </div>
+    </mat-card-content>
+  </mat-card>
+</div>

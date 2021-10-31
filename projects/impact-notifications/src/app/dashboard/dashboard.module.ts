@@ -10,6 +10,7 @@ import { TotalUsersComponent } from './total-users/total-users.component';
 import { FrequentUserComponent } from './frequent-user/frequent-user.component';
 import { TotalMessagesComponent } from './total-messages/total-messages.component';
 import { TranslateModule } from '@ngx-translate/core';
+import { MessageStatsModule } from './message-stats/message-stats.module';
 
 const routes: Routes = [
   {
@@ -32,6 +33,7 @@ const routes: Routes = [
     FlexLayoutModule,
     StatisticsModule,
     TranslateModule,
+    MessageStatsModule,
   ],
   exports: [DashboardComponent],
 })

@@ -8,7 +8,8 @@
     "statistics": "आंकड़े",
     "latest_feed": "नवीनतम फ़ीड",
     "latest_feed_zero_state": "नवीनतम फ़ीड देखने के लिए अधिसूचना जोड़ें",
-    "more": "और देखो"
+    "more": "और देखो",
+    "message_distribution": "संदेश वितरण / उपयोगकर्ता"
   },
   "header": {
     "title": "इम्पैक्ट टेक",

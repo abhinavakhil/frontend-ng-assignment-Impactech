@@ -1,5 +1,8 @@
 .latest-feed {
   height: 415px;
+  @media only screen and (max-width: 480px) {
+    height: auto;
+  }
 
   p {
     padding-top: 15px;

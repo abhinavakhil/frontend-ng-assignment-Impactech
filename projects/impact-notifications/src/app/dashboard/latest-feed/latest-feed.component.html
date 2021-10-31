@@ -2,8 +2,8 @@
   <mat-card>
     <h3 class="title">{{ "dashboard.latest_feed" | translate }}</h3>
     <mat-divider></mat-divider>
-    <mat-card-content *ngIf="messages.length">
-      <div *ngFor="let message of messages">
+    <mat-card-content *ngIf="inbox.length">
+      <div *ngFor="let message of inbox">
         <p>
           {{ message.message | titlecase }} -
           {{ "notification.form" | translate }} ({{ message.from_email }}) -
@@ -14,13 +14,13 @@
       </div>
     </mat-card-content>
 
-    <mat-card-actions align="end" *ngIf="messages.length">
+    <mat-card-actions align="end" *ngIf="inbox.length">
       <button mat-button routerLink="/notification">
         {{ "dashboard.more" | translate }}
       </button>
     </mat-card-actions>
 
-    <div *ngIf="messages.length == 0">
+    <div *ngIf="inbox.length == 0">
       <p>
         <button mat-raised-button routerLink="/notification">
           {{ "dashboard.latest_feed_zero_state" | translate }}

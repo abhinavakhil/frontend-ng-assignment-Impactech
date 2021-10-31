@@ -10,7 +10,10 @@ import { monthList } from '../monthList';
 })
 export class LatestFeedComponent implements OnInit {
   @Input() messages: CreateMessage[];
+
   currentUser: any;
+  inbox: Array<any> = [];
+  outbox: Array<any> = [];
 
   constructor(private authService: AuthenticationService) {}
 
@@ -23,22 +26,16 @@ export class LatestFeedComponent implements OnInit {
    * get last 10 messages user has received
    */
   getLatestFeed() {
-    if (this.messages?.length > 10) {
-      // this.messages = this.messages.slice(
-      //   this.messages?.length - 10,
-      //   this.messages?.length
-      // );
-
-      let inbox = [];
+    if (this.messages?.length) {
       this.messages.forEach((message) => {
-        if (message.from_email !== this.currentUser.userDetails.email)
-          return this.messages;
+        if (message.from_email !== this.currentUser.userDetails.email) {
+          this.inbox.push(message);
+        } else {
+          this.outbox.push(message);
+        }
       });
 
-      this.messages = inbox.slice(
-        this.messages.length - 10,
-        this.messages.length
-      );
+      this.inbox = this.inbox.slice(this.inbox.length - 10, this.inbox.length);
     }
   }
 

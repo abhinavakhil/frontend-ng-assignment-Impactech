@@ -8,7 +8,8 @@
     "statistics": "Statistics",
     "latest_feed": "Latest Feed",
     "latest_feed_zero_state": "Add notification to see latest feed",
-    "more": "View More"
+    "more": "View More",
+    "message_distribution": "Message Distribution / User"
   },
   "header": {
     "title": "Impact Tech",
